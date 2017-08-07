@@ -487,20 +487,17 @@ jQuery(document).ready(function () {
 
 
  <div>
- 	<form id='contact_form' method='POST' action="http://formspree.io/info@portlandfreights.com">
-	  <div class='large-12 columns'>
-	    <p id='thanks' style='display: none;'>
-	      Thanks for contacting us, we'll be in touch soon!
-	    </p>
-	  </div>
-	  <div class='medium-12 columns'>
-	    <input class='required' name='name' placeholder='NAME' type='text'> <br> <br>
-	    <input class='required email' name='email' placeholder='EMAIL' type='text'> <br> <br>
-	    <input class='required' name='subject' placeholder='SUBJECT' type='text'> <br> <br>
-	    <textarea class='required' name='message' placeholder='MESSAGE'></textarea> <br> <br>
-	    <input class='button white' type='submit'>
-	  </div>
+ 	<form action="https://getsimpleform.com/messages?form_api_token=76e98d1ab43fde44443fc3219ccc71ec" method="post">
+	  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+	  <input type='hidden' name='redirect_to' value='https://portlandfreights.com/thank-you/index.html' />
+	  <!-- all your input fields here.... -->
+	  <input style="width: 350px; background-color: #DDD" placeholder="Name" type='text' name='name' /> <br><br>
+	  <input style="width: 350px; background-color: #DDD" placeholder="Email Address" type='email' name='email' /> <br><br>
+	  <input style="width: 350px; background-color: #DDD" placeholder="Subject" type='text' name='subject' /> <br><br>
+	  <textarea style="width: 350px; background-color: #DDD" placeholder="Message" name="message"></textarea> <br><br>
+	  <input type='submit' value='Send Message' />
 	</form>
+      
  </div>
 
 
