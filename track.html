@@ -239,7 +239,7 @@ img.emoji {
 	<li id="menu-item-6213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6213 menu-item-depth-1"><a href="gallery-2/index.html"><span class="nav_item_wrap"><span class="nav_title">Gallery</span></span></a>	</li>
 </ul>
 </li>
-<li id="menu-item-6139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6139 menu-item-mega menu-item-mega-cols-four menu-item-depth-0 menu-item-subtitle"><a href="track.html"><span class="nav_item_wrap"><span class="nav_title">Track</span><span class="nav_subtitle">Track Shippment</span></span></a>
+<li id="menu-item-6139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6139 menu-item-mega menu-item-mega-cols-four menu-item-depth-0 menu-item-subtitle"><a href="track.html"><span class="nav_item_wrap"><span class="nav_title">Track</span><span class="nav_subtitle">Track & Check</span></span></a>
 
 </li>
 <li id="menu-item-6145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6145 menu-item-mega menu-item-mega-cols-four menu-item-depth-0 menu-item-subtitle"><a href="testimonials/index.html"><span class="nav_item_wrap"><span class="nav_title">Testimonials</span><span class="nav_subtitle">What Clients Say</span></span></a>
@@ -270,7 +270,7 @@ img.emoji {
 		<div class="headline cmsmasters_color_scheme_second">
 			<div class="headline_outer">
 				<div class="headline_color"></div><div class="headline_inner align_left">
-				<div class="headline_aligner"></div><div class="headline_text"><h1 class="entry-title">Track Your Shippment</h1></div><div class="cmsmasters_breadcrumbs"><div class="cmsmasters_breadcrumbs_aligner"></div><div class="cmsmasters_breadcrumbs_inner"><a href="index-2.html" class="cms_home">Home</a>
+				<div class="headline_aligner"></div><div class="headline_text"><h1 class="entry-title">Tracking</h1></div><div class="cmsmasters_breadcrumbs"><div class="cmsmasters_breadcrumbs_aligner"></div><div class="cmsmasters_breadcrumbs_inner"><a href="index-2.html" class="cms_home">Home</a>
 	<span class="breadcrumbs_sep"> / </span>
 	<span>Tracking</span></div></div></div></div>
 		</div><div class="middle_inner">
@@ -588,20 +588,37 @@ img.emoji {
 <div id="cmsmasters_heading_578022125bb7b" class="cmsmasters_heading_wrap cmsmasters_heading_align_left">
 	<h3 class="cmsmasters_heading">Tracking</h3>
 	<!-- here tracking form will sit --> 
-<div style="width:%; float:left; padding-top:px; margin-top:px; background-color: #FFBA00; border-radius:5px; padding:4px; margin-left:; clear:right;">
-					    <p>For up-to-date shipment tracking information, enter the MLS Tracking Code without spaces or dashes   </p>                       
-					    <p>(example: 40511122121).</p>
-				        <hr style="color:#FFF;"/>
-<form action="https://centralpanel.website/portlandfreights/app/tracking/query.php" method="post" target="_self"> <br />
-							 
-  <span class="styleRE"><strong>BL,Airway Bill, Container Number: </strong></span>
-  <input name="tracking" type="text" class="logintb2" style="border:#00C thin solid; size:14pt; id="" value="" size="25"txttrackingcode="txttrackingcode" />
-  <input name="track" type="submit" class="accordionHeaderSelected" value="Track now" />
-  <span style=" width:180px; float:right; margin-top:-2px; margin-right:100px; color:red; border-radius:5px; padding-left:20px; clear:right;"> &nbsp;
-  <?php if(!empty($_GET['msg'])){echo @$_GET['msg'];}?>
-  </span><br/>
-</form>
-				      </div>
+<div>
+<p>
+	For up-to-date shipment tracking information, enter the MLS Tracking Code without spaces or dashes
+	<p>(example: 40511122121).</p>
+	<form action="https://centralpanel.website/portlandfreights/app/tracking/query.php" method="post" target="_self">
+	<div class="form-group">
+		<input type="text" name="tracking" placeholder="Enter Tracking #">
+		<input type="submit" name="track" value="Track">
+	</div>
+	</form>
+</p>
+</div>
+					  <!--end tracking form -->
+</div>
+
+
+<div style="margin-top: 30px;" id="cmsmasters_heading_578022125bb7b" class="cmsmasters_heading_wrap cmsmasters_heading_align_left">
+	<h3 class="cmsmasters_heading">Check Vault Status</h3>
+	<!-- here tracking form will sit --> 
+<div>
+<p>
+	Enter your vault number to check the status of your vault.
+	<p>(example: 40511122121).</p>
+	<form action="https://centralpanel.website/portlandfreights/app/tracking/query.php" method="post" target="_self">
+	<div class="form-group">
+		<input type="text" name="number" placeholder="Enter Vault #">
+		<input type="submit" name="vault" value="Check Status">
+	</div>
+	</form>
+</p>
+</div>
 					  <!--end tracking form -->
 </div>
 
