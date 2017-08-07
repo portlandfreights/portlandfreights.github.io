@@ -200,7 +200,7 @@ img.emoji {
 </div><div class="slogan_wrap"><div class="slogan_wrap_inner"><div class="slogan_wrap_text"><div class="#-time">
 	<span>
 		<span>SUNDAY CLOSED</span>
-		<strong>Mon - Sat 8.00 - 18.00</strong>
+		<strong>MON - SAT 8:00 AM - 6:00 PM</strong>
 	</span>
 </div>
 <div class="#-phone-4">
@@ -487,7 +487,7 @@ jQuery(document).ready(function () {
 
 
  <div>
- 	<form id='contact_form' method='POST'>
+ 	<form id='contact_form' method='POST' action="http://formspree.io/info@portlandfreights.com">
 	  <div class='large-12 columns'>
 	    <p id='thanks' style='display: none;'>
 	      Thanks for contacting us, we'll be in touch soon!
@@ -502,6 +502,8 @@ jQuery(document).ready(function () {
 	  </div>
 	</form>
  </div>
+
+
 
 
 
@@ -718,24 +720,7 @@ var cmsmasters_ve_lang = {"required":"* This field is required","select_option":
 </script>
 <script type='text/javascript' src='../wp-content/plugins/cmsmasters-contact-form-builder/js/jquery.validationEngine-lang6a9f6a9f.js?ver=1.3.6'></script>
 <script type='text/javascript' src='../www.google.com/recaptcha/apida9bda9b.html?onload=validateCaptcha&amp;ver=2.0.0'></script>
-<script>
-	$('form#contact_form').validate({
-  messages: { },
-  submitHandler: function(form) {
-    $.ajax({
-      url: "//formspree.io/info@portlandfreights.com",
-      method: "POST",
-      data: $(form).serialize(),
-      dataType: "json",
-      success: function(data) {
-          $("form#contact_form :input").prop("disabled", true);
-          $('#thanks').show();
-      }
-    });
-    return false;
-  }
-});
-</script>
+
 </body>
 
 <!-- Mirrored from logistic-business.cmsmasters.net/contacts/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jul 2016 06:35:09 GMT -->
