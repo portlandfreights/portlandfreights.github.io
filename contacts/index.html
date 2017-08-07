@@ -480,7 +480,34 @@ jQuery(document).ready(function () {
 </script>
 <!-- <script type="text/javascript" src="https://form.myjotform.com/jsform/71394109769568"></script> -->
 <!-- <script type="text/javascript" src="https://form.myjotform.com/72166187794570"></script> -->
- <script src="https://form.myjotform.com/static/feedback2.js" type="text/javascript"> var JFL_72166187794570 = new JotformFeedback({ formId: '72166187794570', base: 'https://form.myjotform.com/', windowTitle: 'Artistic Contact Form', background: '#FFA500', fontColor: '#FFFFFF', type: 'false', height: 500, width: 700, openOnLoad: false }); </script> <a class="btn lightbox-72166187794570" style="margin-top: 16px"> Click here to send us a message </a>
+ <script src="https://form.myjotform.com/static/feedback2.js" type="text/javascript"> var JFL_72166187794570 = new JotformFeedback({ formId: '72166187794570', base: 'https://form.myjotform.com/', windowTitle: 'Artistic Contact Form', background: '#FFA500', fontColor: '#FFFFFF', type: 'false', height: 500, width: 700, openOnLoad: false }); </script> 
+
+
+
+
+
+ <div>
+ 	<form id='contact_form' method='POST'>
+	  <div class='large-12 columns'>
+	    <p id='thanks' style='display: none;'>
+	      Thanks for contacting us, we'll be in touch soon!
+	    </p>
+	  </div>
+	  <div class='medium-12 columns'>
+	    <input class='required' name='name' placeholder='NAME' type='text'> <br> <br>
+	    <input class='required email' name='email' placeholder='EMAIL' type='text'> <br> <br>
+	    <input class='required' name='subject' placeholder='SUBJECT' type='text'> <br> <br>
+	    <textarea class='required' name='message' placeholder='MESSAGE'></textarea> <br> <br>
+	    <input class='button white' type='submit'>
+	  </div>
+	</form>
+ </div>
+
+
+
+
+
+
 </div></div>
 </div>
 <div class="cmsmasters_column one_third">
@@ -691,6 +718,24 @@ var cmsmasters_ve_lang = {"required":"* This field is required","select_option":
 </script>
 <script type='text/javascript' src='../wp-content/plugins/cmsmasters-contact-form-builder/js/jquery.validationEngine-lang6a9f6a9f.js?ver=1.3.6'></script>
 <script type='text/javascript' src='../www.google.com/recaptcha/apida9bda9b.html?onload=validateCaptcha&amp;ver=2.0.0'></script>
+<script>
+	$('form#contact_form').validate({
+  messages: { },
+  submitHandler: function(form) {
+    $.ajax({
+      url: "//formspree.io/info@portlandfreights.com",
+      method: "POST",
+      data: $(form).serialize(),
+      dataType: "json",
+      success: function(data) {
+          $("form#contact_form :input").prop("disabled", true);
+          $('#thanks').show();
+      }
+    });
+    return false;
+  }
+});
+</script>
 </body>
 
 <!-- Mirrored from logistic-business.cmsmasters.net/contacts/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jul 2016 06:35:09 GMT -->
